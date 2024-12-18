@@ -170,10 +170,10 @@ function updateTotalPrice(price) {
     totalPriceSpan.textContent = totalPrice.toLocaleString();
 }
 
+// 주문 하기 함수
 function orderMenu() {
     const cartItems = document.querySelectorAll('.cart-item');
     let orderDetails = "";
-    let count = 0;
 
     cartItems.forEach(item => {
         const name = item.querySelector('label').innerText;
@@ -181,7 +181,6 @@ function orderMenu() {
         const price = item.querySelector('.price').innerText;
 
         if (parseInt(quantity) > 0) {
-            count++;
             orderDetails += `<li>${name} (${quantity}개) - ${price}원</li>`;
         }
     });
@@ -194,13 +193,14 @@ function orderMenu() {
     const orderList = document.querySelector('.order-list');
     orderList.innerHTML = orderDetails;
 
-    if (count > 0) {
+    if (cartItems.length > 0) {
         document.getElementById('popupContainer').style.display = 'block';
     } else {
         alert('선택한 메뉴가 없습니다.');
     }
 }
 
+// 주문 창 > 예예
 function orderYes() {
     alert('주문이 접수되었습니다.');
     location.reload();
@@ -235,7 +235,11 @@ function quantitySet() {
         popupContent.appendChild(item);
     });
     
-    document.getElementById('popupContainer2').style.display = 'block';
+    if (cartItems.length > 0) {
+        document.getElementById('popupContainer2').style.display = 'block';
+    } else {
+        alert('선택한 메뉴가 없습니다.');
+    }
 
 }
 
