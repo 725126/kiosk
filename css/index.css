@@ -1,0 +1,512 @@
+@font-face {
+    font-family: 'dimibang_new';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.1/dimibang_new.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChusaLove';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/ChusaLove.woff2') format('woff2');
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-style: normal;
+}
+
+
+body {
+    height: 100vh;
+    font-family: 'dimibang_new';
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr auto;
+}
+
+
+header {
+    font-family: 'ChusaLove';
+    height: 20vh;
+    min-height: 150px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    grid-column: 1 / 4;
+    background: url(../images/headerBg.jpg) no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.logo {
+    font-size: 3.5em;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-top: -30px;
+    font-size: 1.2em;
+}
+
+main {
+    grid-column: 1 / 3;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* aside CSS */
+
+aside {
+    grid-row: 2 / 3;
+}
+
+.cart-container {
+    height: 70vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 15px 0px 15px;
+    background-color: #FEF3E2;
+}
+
+.cart-container h2 {
+    font-family: 'ChusaLove';
+    margin-bottom: 15px;
+}
+
+
+.cart-container hr {
+    width: 24vw;
+}
+
+.cart-container .total-price {
+    margin-top: -30px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.cart-list {
+    min-height: 300px;
+}
+
+.total-price p {
+    font-size: 1.3em;
+}
+
+.cart-item p {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.cart-item p .del-btn {
+    cursor: pointer;
+    color: #C80036;
+}
+
+.cart-item p .del-btn:hover {
+    color: #FF6969;
+}
+
+.cart-item p label {
+    white-space: nowrap;
+    width: 100px;
+    float: left;
+}
+
+.cart-item p .price {
+    white-space: nowrap;
+    text-align: right;
+    /* width: 5vw; */
+}
+
+
+/* amount button CSS */
+
+.quantity {
+    font-family: 'ChusaLove';
+    width: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: column;
+}
+
+.quantity button {
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #708871;
+    border: none;
+}
+
+.quantity .plus {
+    padding-left: 10px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.quantity .plus:hover {
+    background-color: #E6C767;
+}
+
+.quantity .minus {
+    padding-right: 10px;
+    margin-right: 15px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.quantity .minus:hover {
+    background-color: #F87A53;
+}
+
+.quantity input {
+    text-align: center;
+    width: 30px;
+    border: 2px solid #708871;
+}
+
+
+/* aside button CSS */
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.aside-button {
+    cursor: pointer;
+    font-size: 1.2em;
+    font-family: 'ChusaLove';
+    color: #e9eed9;
+    height: 6vh;
+    padding: 10px 25px;
+    border-radius: 15px;
+}
+
+#orderBtn {
+    border: 3px solid #cd5c08;
+    background-color: #54473f;
+}
+
+#orderBtn:hover {
+    background-color: #86AB89;
+}
+
+#cancelBtn {
+    border: 3px solid #54473f;
+    background-color: #cd5c08;
+    margin-bottom: 50px;
+}
+
+#cancelBtn:hover {
+    background-color: #FF885B;
+}
+
+/* main CSS */
+
+/* tab menu CSS */
+
+main {
+    min-width: 480px;
+}
+
+.tab-menu-container {
+    padding: 30px 15px 0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-button-group {
+    font-family: 'ChusaLove';
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 6px solid #708871; 
+    border-radius: 5px;
+}
+
+.tab-button {
+    border-radius: 10px 10px 0px 0px;
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 15px 25px 10px 25px;
+    color: #FCFAEE;
+    background-color: #BEC6A0;
+}
+
+#lunchBtn {
+    background-color: #708871;
+}
+
+.price {
+    color: #702931;
+}
+
+#dinnerMenu {
+    display: none;
+}
+
+
+.menu-list {
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.menu-item {
+    cursor: pointer;
+    text-align: center;
+}
+
+.item-info {
+    min-height: 90px;
+    max-height: 100px;
+    height: 12vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #606676;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.item-info p {
+    margin: 0;
+}
+
+.menu-img {
+    border-radius: 10px 10px 0px 0px;
+    min-width: 120px;
+    max-width: 200px;
+    width: 18vw;
+    margin-bottom: -10px;
+}
+
+.respon {
+    display: none;
+}
+
+/* manual CSS */
+
+.manual-container {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0px 12px 0px 12px;
+}
+
+.manual-container p {
+    font-family: 'ChusaLove';
+    font-size: 1.3em;
+}
+
+li {
+    padding-bottom: 1vw;
+    white-space: nowrap;
+}
+
+li span {
+    font-family: 'ChusaLove';
+}
+
+.btnSpan {
+    font-size: 0.8em;
+    color: #e9eed9;
+    padding: 3px 7px;
+    border-radius: 10px;
+}
+
+#orderSpan {
+    border: 3px solid #cd5c08;
+    background-color: #54473f;
+}
+
+#cancelSpan {
+    border: 3px solid #54473f;
+    background-color: #cd5c08;
+}
+
+/* layer popup CSS */
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup {
+    position: absolute;
+    color: #213555;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FEF3E2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #C80036;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #FF6969;
+}
+
+.order-list {
+    text-align: center;
+}
+
+.popup h2 {
+    color: #213555;
+    font-family: 'ChusaLove';
+
+}
+
+.order-list li {
+    text-align: left;
+}
+
+.popup h3 {
+    color: #213555;
+    font-family: 'ChusaLove';
+    text-align: center;
+
+}
+
+.popup h3 .popup-total-price {
+    color: #702931;
+}
+
+.popup p {
+    font-size: 1.1em;
+}
+
+.popup button {
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'dimibang_new';
+    font-size: 1.1em;
+    padding: 5px 10px;
+    color: #FFF8E6;
+    border: none;
+}
+
+#popupYesBtn {
+    background-color: #D39D55;
+    margin-right: 5px;
+}
+
+#popupYesBtn:hover {
+    background-color: #FFBF61;
+}
+
+#popupNoBtn {
+    background-color: #8D0B41;
+}
+
+#popupNoBtn:hover {
+    background-color: #CA7373;
+}
+
+/* responsive CSS */
+@media screen and (max-width: 736px) {
+
+    main {
+        margin-top: 20px;
+        grid-column: 1 / 4;
+        grid-row: 2 / 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+        min-height: 500px;
+    }
+
+    .manual-container {
+        display: none;
+    }
+
+    .cart-container {
+        display: none;
+    }
+
+    .respon {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+    }
+
+    .respon button {
+        min-height: 50px;
+        font-size: 1.5em;
+    }
+}
+
+@media screen and ((min-width: 1000px)) {
+
+    .aside-button {
+        white-space: nowrap;
+        height: 7vh;
+        width: 20vh;
+        font-size: 1.5em;
+        min-width: 165px;
+    }
+
+    .cart-item {
+        font-size: 1.3em;
+    }
+
+    .cart-item p label {
+        white-space: nowrap;
+        width: 130px;
+        float: left;
+    }
+
+    .cart-item p .del-btn {
+        margin-right: 20px;
+    }
+
+    .total-price p {
+        font-size: 1.6em;
+    }
+
+    .item-info {
+        font-size: 1.1em;
+        min-height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .tab-button {
+        font-size: 1.4em;
+    }
+
+    .cart-container h2 {
+        font-size: 1.7em;
+    }
+
+    .manual-container p {
+        font-size: 1.5em;
+    }
+
+    .manual-container ol li {
+        font-size: 1.1em;
+    }
+}
