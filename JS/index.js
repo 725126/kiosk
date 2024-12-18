@@ -217,6 +217,13 @@
 
     // 취소 함수
     function resetMenu() {
-        alert('취소되었습니다.');
-        location.reload();
+        if(confirm("정말 취소하시겠습니까?")) {
+            const removeItems = document.querySelectorAll(".cart-item");
+            
+            removeItems.forEach(item => {
+                item.remove();
+            });
+            
+            alert('취소되었습니다.');
+        }
     }
