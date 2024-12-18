@@ -223,11 +223,7 @@
             removeItems.forEach(item => {
                 item.remove();
             });
-<<<<<<< HEAD
-
-=======
             
->>>>>>> 8a7831cbb3c1d03173f63178f5d1bf83916f9931
             alert('취소되었습니다.');
         }
     }
