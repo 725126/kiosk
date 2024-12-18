@@ -204,7 +204,39 @@ aside {
 }
 
 #cancelBtn:hover {
-    background-color: #FF885B;
+    border: 3px solid #cd5c08;
+    background-color: #8D0B41;
+
+}
+
+/* respon quantity button CSS */
+
+#quantityBtn {
+    color: #1E3E62;
+    border: 3px solid #606676;
+    background-color: #BEC6A0;
+}
+
+#quantityBtn:hover {
+    color: #FFF;
+    border: 3px solid #FF6500;
+    background-color: #7E60BF;
+}
+
+#closeBtn2 {
+    padding: 5px 7px;
+    border-radius: 5px;
+    background-color: #606676;
+    color: #fff;
+}
+
+#closeBtn2:hover {
+    background-color: #1230AE;
+}
+
+/* respon popup quantity CSS */
+.popup-content .price {
+    padding-left: 5vw;
 }
 
 /* main CSS */
@@ -446,6 +478,10 @@ li span {
 
     .cart-container {
         display: none;
+    }
+
+    .popup-content {
+        margin-top: 40px;
     }
 
     .respon {

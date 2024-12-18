@@ -107,6 +107,7 @@
 
                 <!-- 작은 화면 일 때 버튼 -->
                 <div class="button-container respon">
+                    <button class="aside-button" id="quantityBtn" onclick="quantitySet();">수량 설정하기</button>
                     <button class="aside-button" id="orderBtn" onclick="orderMenu();">주문하기</button>
                     <button class="aside-button" id="cancelBtn" onclick="resetMenu();">취소하기</button>
                 </div>
@@ -125,7 +126,7 @@
             </ol>
         </div>
 
-        <!-- 레이어 팝업 -->
+        <!-- 레이어 팝업 1 -->
         <div id="popupContainer" class="popup-container">
             <div class="popup">
                 <span class="close-btn" id="closeBtn"><i class="fa-solid fa-x"></i></span>
@@ -136,6 +137,16 @@
                 <p>주문하시겠습니까?</p>
                 <button id="popupYesBtn" onclick="orderYes();">네</button>
                 <button id="popupNoBtn" onclick="orderNo();">아니요</button>
+            </div>
+        </div>
+
+        <!-- 레이어 팝업 2 -->
+        <div id="popupContainer2" class="popup-container">
+            <div class="popup">
+                <span class="close-btn" id="closeBtn2"><i class="fa-solid fa-x"></i></span>
+                <div class="popup-content">
+
+                </div>
             </div>
         </div>
 

@@ -225,3 +225,28 @@ function resetMenu() {
         alert('취소되었습니다.');
     }
 }
+
+/////
+function quantitySet() {
+    const cartItems = document.querySelectorAll('.cart-item');
+    const popupContent = document.querySelector('.popup-content');
+    
+    cartItems.forEach(item => {
+        popupContent.appendChild(item);
+    });
+    
+    document.getElementById('popupContainer2').style.display = 'block';
+
+}
+
+// 팝업 화면 닫기
+document.getElementById('closeBtn2').addEventListener('click', function () {
+    const cartItems = document.querySelectorAll('.cart-item');
+    const cartList = document.querySelector('.cart-list');
+
+    cartItems.forEach(item => {
+        cartList.appendChild(item);
+    });
+
+    document.getElementById('popupContainer2').style.display = 'none';
+});
